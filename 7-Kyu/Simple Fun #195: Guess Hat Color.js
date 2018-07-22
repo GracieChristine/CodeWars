@@ -35,5 +35,5 @@
 //
 
 function guessHatColor(a,b,c,d) {
-  return b === c ? 1 : 2
+  return b === c ? 1 : 2;
 }
