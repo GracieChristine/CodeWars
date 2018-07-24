@@ -15,6 +15,10 @@
 // isSquare([]);
 // returns undefined
 
+let isSquare = function(arr){
+  return (arr.length) ? arr.every(x=>Math.sqrt(x)%1==0) : undefined;
+}
+
 let isSquare = (arr) => {
   let count = 0
   if (arr.length != 0) {
