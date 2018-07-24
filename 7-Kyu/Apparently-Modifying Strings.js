@@ -24,3 +24,17 @@
 function apparently(string) {
   return string.replace(/(and|but\b)(?!\s+apparently\b)/g, '$1 apparently')
 }
+
+function apparently(string) {
+  var arr = string.split(' ');
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'and' && arr[i + 1] !== 'apparently') {
+      arr[i] = 'and apparently';
+    } else {
+      if (arr[i] === 'but' && arr[i + 1] !== 'apparently') {
+        arr[i] = 'but apparently';
+      }
+    }
+  }
+  return arr.join(' ').toString();
+}
