@@ -24,12 +24,16 @@
 // The input will always be arrays/lists. So no need to check the inputs.
 
 function arrayInfo(arr) {
-  let length = arr.length, intC = 0, floatC = 0, strC = 0, wsC = 0, stat = [];
+  let length = arr.length,
+    intC = 0,
+    floatC = 0,
+    strC = 0,
+    wsC = 0,
+    stat = [];
 
   if (length == 0) {
     return 'Nothing in the array!';
-  }
-  else {
+  } else {
     arr.map((item) => {
       console.log('Item...', item, ' :: ', typeof item);
       if (typeof item == 'number' && Number.isInteger(item) == true) {
@@ -46,11 +50,45 @@ function arrayInfo(arr) {
       }
     })
   }
-  console.log('Final...', 'Length :: ', Array.from(length), '... Int Count :: ', intC, '... Float Count :: ', floatC, '... String C :: ', strC, '... White Space C :: ', wsC);
 
-
-  stat.push([length], (intC > 0 ? [intC] : [null]), (floatC > 0 ? [floatC] : [null]), (strC > 0 ? [strC] : [null]), (wsC > 0 ? [wsC] : [null]));
+  stat.push([length], (
+    intC > 0
+    ? [intC]
+    : [null]), (
+    floatC > 0
+    ? [floatC]
+    : [null]), (
+    strC > 0
+    ? [strC]
+    : [null]), (
+    wsC > 0
+    ? [wsC]
+    : [null]));
 
   return stat;
+}
 
+function arrayInfo(arr) {
+  if (!arr.length)
+    return 'Nothing in the array!'
+
+  return [
+    x => true,
+    Number.isInteger,
+    x => typeof x == 'number' && !Number.isInteger(x),
+    x => typeof x == 'string' && x != ' ',
+    x => x == ' '
+  ].map(f => [arr.filter(f).length || null])
+}
+
+function arrayInfo(arr) {
+  if (arr.length === 0)
+    return 'Nothing in the array!';
+  return [
+    [arr.length],
+    [arr.filter(x => x === parseInt(x)).length || null],
+    [arr.filter(x => typeof x === 'number' && (/\./).test(x)).length || null],
+    [arr.filter(x => typeof x === 'string' && x !== ' ').length || null],
+    [arr.filter(x => x === ' ').length || null]
+  ];
 }
