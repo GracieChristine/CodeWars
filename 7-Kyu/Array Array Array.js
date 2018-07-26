@@ -43,3 +43,14 @@ let explode = (x) => {
     return 'Void!';
   }
 }
+
+let explode = (x) => {
+
+  let res = Array.from({
+    length: ((+ a | 0) + (+ b | 0))
+  }).map((x, i) => [a, b])
+  return res.length
+    ? res
+    : 'Void!'
+
+}
