@@ -15,3 +15,8 @@ function highAndLow(numbers){
   let arr = numbers.split(' ').sort((a,b) => a - b);
   return arr[arr.length - 1] + ' ' + arr[0];
 }
+
+function highAndLow(numbers){
+  numbers = numbers.split(' ').map(Number);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
