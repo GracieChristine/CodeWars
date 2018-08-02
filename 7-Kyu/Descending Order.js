@@ -11,3 +11,7 @@ function descendingOrder(n) {
   let arr = n.toString().split('').sort((a, b) => b - a);
   return parseInt(arr.join(''));
 }
+
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
