@@ -18,3 +18,9 @@ function narcissistic( value ) {
             parseInt(sum) + Math.pow(parseInt(char), value.toString().length)
         , 0)
 }
+
+function narcissistic( value ) {
+  return ('' + value).split('').reduce(function(p, c){
+    return p + Math.pow(c, ('' + value).length)
+    }, 0) == value;
+}
