@@ -27,3 +27,18 @@ function printerError(s) {
   }
   return `${bad}/${length}`;
 }
+
+function printerError(s) {
+    return s.match(/[^a-m]/g).length + "/" + s.length;
+}
+
+function printerError(s) {
+    // your code
+    var count = 0;
+    for(var i = 0; i < s.length; i++) {
+      if (s[i] > "m") {
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}
