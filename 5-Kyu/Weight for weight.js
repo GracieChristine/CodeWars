@@ -37,3 +37,29 @@ function orderWeight(strng) {
     })
     .join(" ");
 }
+
+
+function orderWeight(strng) {
+ const sum = (str)=>str.split('').reduce((sum,el)=>(sum+(+el)),0);
+  function comp(a,b){
+    let sumA = sum(a);
+    let sumB = sum(b);
+    return sumA === sumB ? a.localeCompare(b) : sumA - sumB;
+   };
+ return strng.split(' ').sort(comp).join(' ');
+}
+
+
+function orderWeight(str) {
+  const sum = x => x.split('').reduce((res, cur) => (res + +cur), 0);
+  return str.split(' ').sort((a, b) => {
+    const diff = sum(a) - sum(b);
+    return diff == 0 ? (a > b ? 1 : -1) : diff;
+  }).join(' ');
+}
+
+function orderWeight(strng) {
+  return strng.split(" ").sort(function f(a, b){
+    return eval(a.split("").join("+")) - eval(b.split("").join("+")) + ([a, b].sort()[1] == a ? 0.1 : -0.1);
+  }).join(" ");
+}
