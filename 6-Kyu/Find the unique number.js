@@ -7,7 +7,7 @@
 function findUniq(arr) {
   let unique = [];
 
-  let sorted = arr.sort((a,b) => a - b);
+  let sorted = arr.sort((a, b) => a - b);
 
   sorted.map((val, index) => {
     if (val !== sorted[index + 1] && val !== sorted[index - 1]) {
@@ -15,4 +15,11 @@ function findUniq(arr) {
     }
   })
   return unique[0];
+}
+
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[0] == arr[1]
+    ? arr.pop()
+    : arr[0]
 }
