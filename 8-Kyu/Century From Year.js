@@ -12,3 +12,7 @@
 function century(year) {
   return (year <= 100) ? 1 : century(year - 100) + 1
 }
+
+const century = year => Math.ceil(year/100)
+
+const century = year => year % 100 === 0 ? parseInt(year / 100) : parseInt(year / 100) + 1;
