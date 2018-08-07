@@ -1,4 +1,4 @@
-public class Positive{
+public class Sum_of_positive{
   public static int sum(int[] arr) {
     int sum = 0;
     for (int i : arr)
@@ -10,7 +10,7 @@ public class Positive{
 }
 
 // import java.util.Arrays;
-// public class Positive{
+// public class Sum_of_positive{
 //   public static int sum(int[] arr){
 //     return Arrays.stream(arr).filter(v -> v > 0).sum();
 //   }
