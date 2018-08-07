@@ -4,3 +4,9 @@ public class Jenny_secret_message {
     return (name == "Johnny") ? "Hello, my love!" : "Hello, " + name + "!";
   }
 }
+
+// public class Jenny_secret_message {
+//   public static String greet(String name) {
+//     return "Hello, " + (name == "Johnny" ?  "my love" : name) + "!";
+//   }
+// }
