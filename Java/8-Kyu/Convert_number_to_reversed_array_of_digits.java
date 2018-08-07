@@ -10,3 +10,13 @@ public class Convert_number_to_reversed_array_of_digits {
     return digits;
   }
 }
+
+// public class Convert_number_to_reversed_array_of_digits {
+//   public static int[] digitize(long n) {
+//     return new StringBuilder().append(n)
+//       .reverse()
+//       .chars()
+//       .map(Character::getNumericValue)
+//       .toArray();
+//   }
+// }
