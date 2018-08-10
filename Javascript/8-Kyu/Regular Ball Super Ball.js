@@ -13,3 +13,7 @@
 function Ball(ballType = 'regular') {
   this.ballType = ballType
 }
+
+let Ball = function(ballType) {
+  this.ballType = ballType || 'regular';
+};
