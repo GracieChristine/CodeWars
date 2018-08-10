@@ -8,3 +8,17 @@
 function reverseWords(str) {
   return str.split(" ").reverse().join(" ");
 }
+
+const reverseWords = s => s
+  .split ` `
+  .reverse()
+  .join ` `;
+
+function reverseWords(str) {
+  var arr = str.split(" ");
+  for (var i = arr.length - 1; i >= 0; i--) {
+    arr.push(arr[i]);
+    arr.splice(i, 1);
+  };
+  return arr.join(" ");
+}
