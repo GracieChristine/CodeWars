@@ -20,3 +20,7 @@ let Ghost = function() {
       return this.color = "red";
   }
 };
+
+let Ghost = function() {
+  this.color = ["white","yellow","purple","red"][Math.floor(Math.random() * 4)];
+};
