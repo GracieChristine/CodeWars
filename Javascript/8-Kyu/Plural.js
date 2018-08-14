@@ -7,3 +7,7 @@
 function plural(n) {
   return (n != 1) ? true : false;
 }
+
+function plural(n) {
+  return n !== 1;
+}
