@@ -22,3 +22,13 @@ function sum(numbers) {
   }
   return sum;
 };
+
+sum = function(numbers) {
+  return numbers.reduce(function(t, n) {
+    return t + n;
+  }, 0);
+};
+
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
