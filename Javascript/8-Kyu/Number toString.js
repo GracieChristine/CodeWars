@@ -5,3 +5,9 @@
 
 const number = 123;
 const a = number.toString();
+
+
+let a = 123..toString();
+let a = 123 .toString()
+let a = (123).toString();
+let a = 123 + '';
