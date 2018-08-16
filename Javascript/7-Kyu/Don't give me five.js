@@ -23,3 +23,17 @@ function dontGiveMeFive(start, end) {
   }
   return count;
 }
+
+function dontGiveMeFive(start, end) {
+  let count = 0
+  for (let i = start; i <= end; i++) {
+    if (!/5/.test(i)) {
+      count++
+    }
+  }
+  return count
+}
+
+function dontGiveMeFive(start, end) {
+  return Array.from(Array(end - start + 1), (e, i) => i + start).filter((e) => ('' + e).indexOf('5') === -1).length;
+}
