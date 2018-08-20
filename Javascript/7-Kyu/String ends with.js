@@ -8,3 +8,11 @@
 function solution(str, ending) {
   return str.substring(str.length - ending.length) == ending;
 }
+
+function solution(str, ending){
+  return new RegExp(ending+"$", "i").test(str);
+}
+
+function solution(str, ending){
+  return str.endsWith(ending);
+}
