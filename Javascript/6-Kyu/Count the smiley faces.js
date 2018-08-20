@@ -28,3 +28,7 @@ function countSmileys(array){
   }
   return count;
 }
+
+function countSmileys(arr) {
+  return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+}
