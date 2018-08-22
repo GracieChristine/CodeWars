@@ -13,3 +13,9 @@ function solution(pairs) {
   }
   return string.slice(0, -1)
 }
+
+function solution(pairs){
+  return Object.keys(pairs)
+    .map(function(k) { return k + ' = ' + pairs[k] })
+    .join(',');
+}
