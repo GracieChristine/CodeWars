@@ -13,3 +13,9 @@ let capitals = function(word) {
   }
   return result;
 };
+
+let capitals = (word) => {
+  return word.split('').reduce((memo, v, i) => {
+    return v === v.toUpperCase() ? memo.concat(i) : memo;
+  }, []);
+};
