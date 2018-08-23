@@ -14,5 +14,36 @@
 // caffeineBuzz(12)  => "CoffeeScript"
 
 function caffeineBuzz(n) {
-  return (n % 12 === 0) ? "CoffeeScript" : (n % 6 === 0) ? "JavaScript" : (n % 3 === 0) ? "Java" : "mocha_missing!";
+  return (n % 12 === 0)
+    ? "CoffeeScript"
+    : (n % 6 === 0)
+      ? "JavaScript"
+      : (n % 3 === 0)
+        ? "Java"
+        : "mocha_missing!";
+}
+
+function caffeineBuzz(n) {
+  if (n % 12 === 0)
+    return "CoffeeScript";
+  if (n % 6 === 0)
+    return "JavaScript";
+  if (n % 3 === 0)
+    return "Java";
+  return "mocha_missing!";
+}
+
+function caffeineBuzz(n) {
+  var str = "mocha_missing!";
+  if (n % 3 == 0) {
+    if (n % 4 == 0) {
+      str = "Coffee";
+    } else {
+      str = "Java";
+    }
+    if (n % 2 == 0) {
+      str = str + "Script";
+    }
+  }
+  return str;
 }
