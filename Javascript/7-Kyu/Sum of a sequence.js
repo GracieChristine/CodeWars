@@ -18,3 +18,19 @@ const sequenceSum = (begin, end, step) => {
   }
   return arr.reduce((sum, val) => (sum += val), 0);
 };
+
+const sequenceSum = (begin, end, step) => {
+  if (begin > end) {
+    return 0;
+  }
+  return begin + sequenceSum(begin + step, end, step);
+};
+
+const sequenceSum = (begin, end, step) => {
+  var sum = 0;
+  for(var i=begin;i<=end;i+=step)
+  {
+    sum += i;
+  }
+  return sum;
+};
