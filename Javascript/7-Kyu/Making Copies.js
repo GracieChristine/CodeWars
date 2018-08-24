@@ -15,3 +15,13 @@
 function copyList(l) {
   return l.slice();
 }
+
+function copyList(l) {
+  return (Array.isArray(l))
+    ? l.slice(0)
+    : "error";
+}
+
+function copyList(l) {
+  return [].concat(l);
+}
