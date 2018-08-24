@@ -11,3 +11,11 @@
 function digitize(n) {
   return String(n).split('').map((val) => parseInt(val));
 }
+
+function digitize(n) {
+  return String(n).split('').map(Number);
+}
+
+function digitize(n) {
+  return n.toString().split('').map(Number);
+}
