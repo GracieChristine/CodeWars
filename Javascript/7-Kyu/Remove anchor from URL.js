@@ -11,3 +11,13 @@
 let removeUrlAnchor = (url) => {
   return url.split('#')[0];
 }
+
+function removeUrlAnchor(url){
+  // TODO: complete
+  return url.replace(/#.*/gi,"");
+}
+
+function removeUrlAnchor(url) {
+  var index = url.indexOf("#");
+  return index == -1 ? url : url.substring(0, url.indexOf("#"));
+}
