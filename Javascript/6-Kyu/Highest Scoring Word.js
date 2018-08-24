@@ -37,3 +37,29 @@ function wordScore(word) {
   });
   return score;
 }
+
+function high(x) {
+  //transform the input string into array & define a string of alphabetical latin characters
+  let arr = x.split(' ');
+  let str = 'abcdefghijklmnopqrstuvwxyz';
+  //Iterate through the array with input words to find the one with the greatest sum
+  let newArr = arr.map(function(word) {
+    let sum = 0;
+    for (let i = 0; i < word.length; i++) {
+      sum += str.indexOf(word[i]);
+    }
+    return sum;
+  });
+  //Return the word with the greatest sum
+  return arr[newArr.indexOf(Math.max(...newArr))];
+}
+
+const {compose, reduce, split} = require('ramda');
+
+const score = compose(reduce((r, v) => r + v.charCodeAt() - 96, 0), split(''));
+
+const high = compose(reduce(
+  (r, v) => score(v) > score(r)
+  ? v
+  : r,
+''), split(' '));
