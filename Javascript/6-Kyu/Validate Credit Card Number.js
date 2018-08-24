@@ -79,3 +79,34 @@ function validate(n) {
     return oddarr;
   }
 }
+
+function validate(n) {
+  let sum = 0;
+
+  while (n > 0) {
+    let a = n % 10;
+    n = Math.floor(n / 10);
+
+    let b = (n % 10) * 2;
+    n = Math.floor(n / 10);
+
+    if (b > 9) {
+      b -= 9;
+    }
+
+    sum += a + b;
+  }
+
+  return sum % 10 == 0;
+}
+
+function validate(n) {
+  n = n.toString().split('').map(Number).reverse();
+  return n.reduce(function(sum, digit, index) {
+    if (index & 1)
+      digit <<= 1;
+    if (digit > 9)
+      digit -= 9;
+    return sum + digit;
+  }, 0) % 10 == 0;
+}
