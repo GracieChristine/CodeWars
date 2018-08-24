@@ -37,3 +37,24 @@ let nbrOfLaps = function(x, y) {
     return gcd(b, a % b);
   }
 }
+
+let nbrOfLaps = function(x, y) {
+  let lcm = x;
+  while (lcm % y != 0) {
+    lcm += x;
+  }
+  return [
+    lcm / x,
+    lcm / y
+  ];
+}
+
+const gcd = (a, b) => !b
+  ? a
+  : gcd(b, a % b)
+const lcm = (a, b) => (a * b) / gcd(a, b)
+const laps = (lcm, x, y) => [
+  lcm / x,
+  lcm / y
+]
+const nbrOfLaps = (x, y) => laps(lcm(x, y), x, y)
