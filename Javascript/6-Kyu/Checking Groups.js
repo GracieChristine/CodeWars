@@ -40,3 +40,11 @@ function groupCheck(s) {
   }
   return bracketArr.length === 0;
 }
+
+
+function groupCheck(s) {
+  let r = /\{\}|\[\]|\(\)/;
+  while (r.test(s))
+    s = s.replace(r, '');
+  return !s.length;
+}
