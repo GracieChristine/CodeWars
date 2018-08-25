@@ -12,7 +12,6 @@
 //
 //   ipToInt32("128.32.10.1") => 2149583361
 
-
 function ipToInt32(ip) {
   let a = ip.split('.').map(function(item) {
     return Number(item);
@@ -20,4 +19,10 @@ function ipToInt32(ip) {
 
   let sum = ((a[0] << 24) >>> 0) + (a[1] << 16) + (a[2] << 8) + a[3];
   return sum;
+}
+
+function ipToInt32(ip) {
+  return ip.split(".").reduce(function(int, v) {
+    return int * 256 + + v;
+  })
 }
