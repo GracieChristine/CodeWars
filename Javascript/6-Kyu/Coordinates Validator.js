@@ -43,3 +43,15 @@ function isValidCoordinates(coordinates) {
   }
   return true;
 }
+
+function isValidCoordinates(coordinates){
+  var match = coordinates.match(/^[-]?(\d+(?:\.\d+)?), [-]?(\d+(?:\.\d+)?)$/);
+  if (!match) { return false; }
+  var lat = Math.abs(parseFloat(match[1]));
+  var lng = Math.abs(parseFloat(match[2]));
+  return lat >= 0 && lat <= 90 && lng >= 0 && lng <= 180;
+}
+
+function isValidCoordinates(coordinates){
+  return /^-?((\d)|([0-8]\d)|(90))(\.\d+)?, ?-?((\d\d?)|(1[0-7]\d)|(180))(\.\d+)?$/.test(coordinates)
+}
