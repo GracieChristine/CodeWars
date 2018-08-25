@@ -15,3 +15,7 @@ function shortcut(string) {
   }
   return solution;
 }
+
+function shortcut(string) {
+  return string.replace(/[aeiou]/g, '')
+}
