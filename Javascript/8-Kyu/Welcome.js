@@ -28,8 +28,8 @@
 // IP_ADDRESS_REQUIRED - no ip address was supplied
 
 function greet(language) {
-	let greeting = {
-	  english: 'Welcome',
+  let greeting = {
+    english: 'Welcome',
     czech: 'Vitejte',
     danish: 'Velkomst',
     dutch: 'Welkom',
@@ -46,11 +46,35 @@ function greet(language) {
     spanish: 'Bienvenido',
     swedish: 'Valkommen',
     welsh: 'Croeso'
-	};
+  };
 
-	if(greeting[language]){
-	  return greeting[language];
-	} else {
-	  return greeting.english;
-	}
+  if (greeting[language]) {
+    return greeting[language];
+  } else {
+    return greeting.english;
+  }
 }
+
+function greet(lang) {
+  return langs[lang] || langs['english'];
+}
+
+let langs = {
+  'english': 'Welcome',
+  'czech': 'Vitejte',
+  'danish': 'Velkomst',
+  'dutch': 'Welkom',
+  'estonian': 'Tere tulemast',
+  'finnish': 'Tervetuloa',
+  'flemish': 'Welgekomen',
+  'french': 'Bienvenue',
+  'german': 'Willkommen',
+  'irish': 'Failte',
+  'italian': 'Benvenuto',
+  'latvian': 'Gaidits',
+  'lithuanian': 'Laukiamas',
+  'polish': 'Witamy',
+  'spanish': 'Bienvenido',
+  'swedish': 'Valkommen',
+  'welsh': 'Croeso'
+};
