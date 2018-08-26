@@ -2,5 +2,11 @@
 
 let zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   let result = distanceToPump / mpg;
-  return (result <= fuelLeft) ? true : false;
+  return (result <= fuelLeft)
+    ? true
+    : false;
+};
+
+let zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump / mpg <= fuelLeft
 };
