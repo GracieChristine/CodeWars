@@ -19,3 +19,9 @@ let repeatIt = (str, n) => {
 
   return output;
 }
+
+let repeatIt = function(str, n) {
+  return typeof str === 'string'
+    ? Array(n + 1).join(str)
+    : 'Not a string';
+}
