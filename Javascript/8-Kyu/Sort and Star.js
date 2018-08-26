@@ -8,3 +8,7 @@ function twoSort(s) {
   let arr = [...s].sort();
   return [...arr[0]].join('***');
 }
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***');
+}
